@@ -71,3 +71,7 @@ export default defineConfig([
   },
 ])
 ```
+git rm --cached .env
+git commit -m "Remove .env from tracking"
+git push
+
