@@ -1,0 +1,31 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+@layer base {
+  :root {
+    --bg-light: #F5F5F3;
+    --bg-dark: #0F0F0F;
+    --text-light: #111111;
+    --text-dark: #F0F0F0;
+  }
+
+  body {
+    @apply bg-background-light text-primary-light transition-colors duration-300;
+  }
+
+  .dark body {
+    @apply bg-background-dark text-primary-dark;
+  }
+
+  /* Custom Scrollbar for TabBar */
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .form-input {
+    @apply w-full bg-background-light dark:bg-[#242424] border border-border-light dark:border-border-dark rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary-accent text-primary-light dark:text-primary-dark transition-shadow;
+  }
+}
